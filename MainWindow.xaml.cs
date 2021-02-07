@@ -19,10 +19,41 @@ namespace BH2ShipHashEditor
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+
     public partial class MainWindow : Window
     {
+        private void init()
+        {
+            // initialization function
+            R = new TextBox();
+            G = new TextBox();
+            B = new TextBox();
+            this.NewHash = new TextBox();
+            this.OldHash = new TextBox();
+            this.Debug = new TextBox();
+            this.Elite = new CheckBox();
+            Stat1 = new TextBox();
+            Stat2 = new TextBox();
+            Stat3 = new TextBox();
+            Stat4 = new TextBox();
+            Stat5 = new TextBox();
+            Stat6 = new TextBox();
+            Stat7 = new TextBox();
+            Mission2_Score = new TextBox();
+            Mission1_Phrase = new TextBox();
+            Mission2_PhraseDifficulty = new TextBox();
+            Mission3_Phrase = new TextBox();
+            Mission3_Unknown = new TextBox();
+            Mission3_Score = new TextBox();
+            Mission3_Difficulty = new TextBox();
+            FirstName = new TextBox();
+            LastName = new TextBox();
+            MkX = new TextBox();
+            UnknownBits = new TextBox();
+        }
         public bool IsElite = false;
         public char[] hash;
+        // our actual ship hash
         public string GenerateShip()
         {
             // first, dictate the available characters.
@@ -38,18 +69,7 @@ namespace BH2ShipHashEditor
                 shipHash.Add(available_bits[rand.Next(0, available_bits.Length)]);
             }
             return string.Join("", shipHash);
-        }
-        public string MD5Hash(string s)
-        {
-            MD5 md5 = new MD5CryptoServiceProvider();
-            md5.ComputeHash(ASCIIEncoding.ASCII.GetBytes(s));
-            byte[] result = md5.Hash;
-            StringBuilder generatedHash = new StringBuilder();
-            for(int i = 0; i < result.Length; i++)
-            {
-                generatedHash.Append(result[i].ToString("x2"));
-            }
-            return generatedHash.ToString();
+            // finally, return a string that is the ship hash.
         }
 
         public void AutoSetFields(char[] shipHash)
@@ -145,32 +165,9 @@ namespace BH2ShipHashEditor
         }
         public MainWindow()
         {
-            R = new TextBox();
-            G = new TextBox();
-            B = new TextBox();
-            this.NewHash = new TextBox();
-            this.OldHash = new TextBox();
-            this.Debug = new TextBox();
-            this.Elite = new CheckBox();
-            Stat1 = new TextBox();
-            Stat2 = new TextBox();
-            Stat3 = new TextBox();
-            Stat4 = new TextBox();
-            Stat5 = new TextBox();
-            Stat6 = new TextBox();
-            Stat7 = new TextBox();
-            Mission2_Score = new TextBox();
-            Mission1_Phrase = new TextBox();
-            Mission2_PhraseDifficulty = new TextBox();
-            Mission3_Phrase = new TextBox();
-            Mission3_Unknown = new TextBox();
-            Mission3_Score = new TextBox();
-            Mission3_Difficulty = new TextBox();
-            FirstName = new TextBox();
-            LastName = new TextBox();
-            MkX = new TextBox();
-            UnknownBits = new TextBox();
+            init();
             InitializeComponent();
+            MainWindow1.Background = App.settings.window_color;
         }
 
         private void Manufacturers_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -547,6 +544,7 @@ namespace BH2ShipHashEditor
         private void RandShipGen_Click(object sender, RoutedEventArgs e)
         {
             this.NewHash.Text = GenerateShip();
+            AutoSetFields(NewHash.Text.ToCharArray());
         }
 
         private void CopyToClipboard_Click(object sender, RoutedEventArgs e)
@@ -559,14 +557,16 @@ namespace BH2ShipHashEditor
             OldHash.Text = Clipboard.GetText();
         }
 
-        private void StringToConvert_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            FinalMD5Hash.Text = MD5Hash(StringToConvert.Text);
-        }
-
         private void ChangeColor_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow1.Background = new SolidColorBrush(Color.FromRgb(byte.Parse(R.Text), byte.Parse(G.Text), byte.Parse(B.Text)));
+            App.settings.window_color = new SolidColorBrush(Color.FromRgb(byte.Parse(R.Text), byte.Parse(G.Text), byte.Parse(B.Text)));
+            MainWindow1.Background = App.settings.window_color;
+        }
+
+        private void MD5HasherButton_Click(object sender, RoutedEventArgs e)
+        {
+            Window md5hasher = new MD5Hasher();
+            md5hasher.Show();
         }
     }
 }

@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BH2ShipHashEditor"
         mc:Ignorable="d"
-        Title="Beat Hazard 2 Ship Hash Editor" Height="855.599" Width="1007.695" Icon="bh2hasheditor.png" Background="DarkGoldenrod" SizeToContent="WidthAndHeight" Cursor="Arrow">
+        Title="Beat Hazard 2 Ship Hash Editor" Height="704.599" Width="924.695" Icon="bh2hasheditor.png" Background="DarkGoldenrod" SizeToContent="WidthAndHeight" Cursor="Arrow">
     <Grid>
         <ComboBox x:Name="Manufacturers" HorizontalAlignment="Left" Margin="398,59,0,0" VerticalAlignment="Top" Width="175" Height="30" FontSize="18" SelectionChanged="Manufacturers_SelectionChanged">
             <ComboBoxItem Content="Brute Inc. [0]"/>
@@ -71,34 +71,29 @@
         <TextBlock HorizontalAlignment="Left" Margin="578,408,0,0" TextWrapping="Wrap" Text="[1 character] Unknown effects." VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="578,435,0,0" TextWrapping="Wrap" Text="[1 character] Changes score requirement." VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="578,462,0,0" TextWrapping="Wrap" Text="[1 character] Changes difficulty requirement." VerticalAlignment="Top"/>
-        <TextBox Name="FirstName" HorizontalAlignment="Left" Height="21" Margin="489,579,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="84" RenderTransformOrigin="0.072,2.362" TextChanged="FirstName_TextChanged"/>
-        <TextBlock HorizontalAlignment="Left" Margin="489,549,0,0" TextWrapping="Wrap" Text="Name Segment #1" VerticalAlignment="Top" FontSize="20"/>
-        <TextBlock HorizontalAlignment="Left" Margin="489,606,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Text="Name Segment #2"/>
-        <TextBox Name="LastName" HorizontalAlignment="Left" Height="21" Margin="489,636,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="84" TextChanged="LastName_TextChanged"/>
+        <TextBox Name="FirstName" HorizontalAlignment="Left" Height="21" Margin="401,579,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="84" RenderTransformOrigin="0.072,2.362" TextChanged="FirstName_TextChanged"/>
+        <TextBlock HorizontalAlignment="Left" Margin="401,549,0,0" TextWrapping="Wrap" Text="Name Segment #1" VerticalAlignment="Top" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="401,606,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Text="Name Segment #2"/>
+        <TextBox Name="LastName" HorizontalAlignment="Left" Height="21" Margin="401,636,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="84" TextChanged="LastName_TextChanged"/>
         <TextBox Name="MkX" HorizontalAlignment="Left" Height="23" Margin="493,490,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" TextChanged="MkX_TextChanged"/>
         <TextBlock HorizontalAlignment="Left" Margin="432,486,0,0" TextWrapping="Wrap" Text="Mk. X" VerticalAlignment="Top" FontSize="20"/>
         <TextBlock HorizontalAlignment="Left" Margin="578,490,0,0" TextWrapping="Wrap" Text="[1 character] Changes the Mk. X at the end of the name." VerticalAlignment="Top" Width="299"/>
         <TextBlock HorizontalAlignment="Left" Margin="394,515,0,0" TextWrapping="Wrap" Text="Bits 28-32" VerticalAlignment="Top" FontSize="20"/>
         <TextBox Name="UnknownBits" HorizontalAlignment="Left" Height="23" Margin="493,518,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" TextChanged="UnknownBits_TextChanged"/>
         <TextBlock HorizontalAlignment="Left" Margin="578,518,0,0" TextWrapping="Wrap" Text="[5 characters] We don't know what editing these does....yet." VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="578,581,0,0" TextWrapping="Wrap" Text="[2 characters]" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="578,638,0,0" TextWrapping="Wrap" Text="[2 characters]" VerticalAlignment="Top"/>
-        <Button Name="RandShipGen" Content="Generate Random Ship&#xD;&#xA;(WARNING: HIGHLY UNSTABLE)" HorizontalAlignment="Left" Margin="595,59,0,0" VerticalAlignment="Top" Width="296" Height="96" Click="RandShipGen_Click"/>
-        <TextBox Name="StringToConvert" HorizontalAlignment="Left" Height="80" Margin="10,571,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="380" FontSize="20" TextChanged="StringToConvert_TextChanged"/>
-        <TextBox Name="FinalMD5Hash" IsReadOnly="True" HorizontalAlignment="Left" Height="31" Margin="10,683,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="380" FontSize="20"/>
-        <TextBlock HorizontalAlignment="Left" Margin="10,656,0,0" TextWrapping="Wrap" Text="Final MD5 Hash" VerticalAlignment="Top" FontSize="20"/>
-        <TextBlock HorizontalAlignment="Left" Margin="10,544,0,0" TextWrapping="Wrap" Text="String to Convert (MD5 Hash)" VerticalAlignment="Top" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="490,581,0,0" TextWrapping="Wrap" Text="[2 characters]" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="490,638,0,0" TextWrapping="Wrap" Text="[2 characters]" VerticalAlignment="Top"/>
+        <Button Name="RandShipGen" Content="Generate Random Ship&#xD;&#xA;(WARNING: HIGHLY UNSTABLE)" HorizontalAlignment="Left" Margin="196,547,0,0" VerticalAlignment="Top" Width="175" Height="117" Click="RandShipGen_Click"/>
         <Button Name="PasteFromClipboard" Content="Paste from Clipboard" HorizontalAlignment="Left" Margin="218,75,0,0" VerticalAlignment="Top" Width="153" Height="30" Click="PasteFromClipboard_Click"/>
         <Button Name="CopyToClipboard" Content="Copy to Clipboard" HorizontalAlignment="Left" Margin="218,110,0,0" VerticalAlignment="Top" Width="153" Height="29" Click="CopyToClipboard_Click"/>
-        <Button Content="Paste&#xD;&#xA;from&#xD;&#xA;Clipboard" HorizontalAlignment="Left" Margin="395,571,0,0" VerticalAlignment="Top" Width="87" Height="80"/>
-        <Button Content="Copy to Clipboard" HorizontalAlignment="Left" Margin="394,683,0,0" VerticalAlignment="Top" Width="148" Height="31"/>
-        <Button Name="ChangeColor" Content="Change Background" HorizontalAlignment="Left" Margin="659,553,0,0" VerticalAlignment="Top" Width="250" Height="47" Click="ChangeColor_Click" FontSize="20"/>
-        <TextBox Name="R" HorizontalAlignment="Left" Height="33" Margin="659,618,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="80" FontSize="20"/>
-        <TextBox Name="G" HorizontalAlignment="Left" Height="33" Margin="744,618,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="80" FontSize="20"/>
-        <TextBox Name="B" HorizontalAlignment="Left" Height="33" Margin="829,618,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="80" FontSize="20"/>
-        <TextBlock HorizontalAlignment="Left" Margin="659,602,0,0" TextWrapping="Wrap" Text="R" VerticalAlignment="Top" FontWeight="Bold"/>
-        <TextBlock HorizontalAlignment="Left" Margin="744,602,0,0" TextWrapping="Wrap" Text="G" VerticalAlignment="Top" FontWeight="Bold"/>
-        <TextBlock HorizontalAlignment="Left" Margin="829,602,0,0" TextWrapping="Wrap" Text="B" VerticalAlignment="Top" FontWeight="Bold"/>
-        <TextBlock HorizontalAlignment="Left" Margin="10,719,0,0" TextWrapping="Wrap" Text="Beat Hazard 2 Hash Editor by ceph" VerticalAlignment="Top" FontSize="8"/>
+        <Button Name="ChangeColor" Content="Change Background" HorizontalAlignment="Left" Margin="573,557,0,0" VerticalAlignment="Top" Width="250" Height="47" Click="ChangeColor_Click" FontSize="20"/>
+        <TextBox Name="R" HorizontalAlignment="Left" Height="33" Margin="573,622,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="80" FontSize="20"/>
+        <TextBox Name="G" HorizontalAlignment="Left" Height="33" Margin="658,622,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="80" FontSize="20"/>
+        <TextBox Name="B" HorizontalAlignment="Left" Height="33" Margin="743,622,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="80" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="573,606,0,0" TextWrapping="Wrap" Text="R" VerticalAlignment="Top" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="658,606,0,0" TextWrapping="Wrap" Text="G" VerticalAlignment="Top" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="743,606,0,0" TextWrapping="Wrap" Text="B" VerticalAlignment="Top" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,663,0,0" TextWrapping="Wrap" Text="Beat Hazard 2 Hash Editor by ceph" VerticalAlignment="Top" FontSize="8"/>
+        <Button Name="MD5HasherButton" Content="Open MD5 Hasher" HorizontalAlignment="Left" Margin="10,547,0,0" VerticalAlignment="Top" Width="181" Height="117" FontSize="20" Click="MD5HasherButton_Click"/>
     </Grid>
 </Window>

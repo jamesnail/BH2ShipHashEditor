@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("bh2%20background.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("bh2hasheditor.ico")]
 
 
