@@ -1,0 +1,15 @@
+C:\Users\james\Desktop\Personal Projects\Beat Hazard 2 Stupidity\BH2ShipHashEditor\bin\Debug\BH2ShipHashEditor.exe.config
+C:\Users\james\Desktop\Personal Projects\Beat Hazard 2 Stupidity\BH2ShipHashEditor\bin\Debug\BH2ShipHashEditor.exe
+C:\Users\james\Desktop\Personal Projects\Beat Hazard 2 Stupidity\BH2ShipHashEditor\bin\Debug\BH2ShipHashEditor.pdb
+C:\Users\james\Desktop\Personal Projects\Beat Hazard 2 Stupidity\BH2ShipHashEditor\obj\Debug\BH2ShipHashEditor.csprojAssemblyReference.cache
+C:\Users\james\Desktop\Personal Projects\Beat Hazard 2 Stupidity\BH2ShipHashEditor\obj\Debug\MainWindow.g.cs
+C:\Users\james\Desktop\Personal Projects\Beat Hazard 2 Stupidity\BH2ShipHashEditor\obj\Debug\App.g.cs
+C:\Users\james\Desktop\Personal Projects\Beat Hazard 2 Stupidity\BH2ShipHashEditor\obj\Debug\BH2ShipHashEditor_MarkupCompile.cache
+C:\Users\james\Desktop\Personal Projects\Beat Hazard 2 Stupidity\BH2ShipHashEditor\obj\Debug\BH2ShipHashEditor_MarkupCompile.lref
+C:\Users\james\Desktop\Personal Projects\Beat Hazard 2 Stupidity\BH2ShipHashEditor\obj\Debug\MainWindow.baml
+C:\Users\james\Desktop\Personal Projects\Beat Hazard 2 Stupidity\BH2ShipHashEditor\obj\Debug\BH2ShipHashEditor.g.resources
+C:\Users\james\Desktop\Personal Projects\Beat Hazard 2 Stupidity\BH2ShipHashEditor\obj\Debug\BH2ShipHashEditor.Properties.Resources.resources
+C:\Users\james\Desktop\Personal Projects\Beat Hazard 2 Stupidity\BH2ShipHashEditor\obj\Debug\BH2ShipHashEditor.csproj.GenerateResource.cache
+C:\Users\james\Desktop\Personal Projects\Beat Hazard 2 Stupidity\BH2ShipHashEditor\obj\Debug\BH2ShipHashEditor.csproj.CoreCompileInputs.cache
+C:\Users\james\Desktop\Personal Projects\Beat Hazard 2 Stupidity\BH2ShipHashEditor\obj\Debug\BH2ShipHashEditor.exe
+C:\Users\james\Desktop\Personal Projects\Beat Hazard 2 Stupidity\BH2ShipHashEditor\obj\Debug\BH2ShipHashEditor.pdb
